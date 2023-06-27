@@ -11,21 +11,96 @@ body {
     background-color: #fff;
     color: #212121;
 }
+/*---------------------------------------------------MENU---------------------------------------------------*/
+.menu-container {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    padding: 20px 20px 20px 40px;
+}
+
+.menu {
+    width: 100%;
+}
 
 
+.links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.logo {
+    float: left;
+}
+
+
+ul.logo2 {
+    list-style-type: none;
+}
+
+.menu-list {
+    float: right;
+    padding: 0px 20px;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 40px;
+}
+
+.logo-icon:hover {
+    opacity: 50%;
+}
+
+.shop-icon,
+.login-icon {
+    width: 32px;
+}
+
+.shop-icon:hover,
+.login-icon:hover {
+    opacity: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 300;
+}
+
+a.menu-link {
+    padding: 0px 10px;
+    vertical-align: middle;
+}
+
+a.menu-link:hover {
+    color: #FF8576;
+}
+
+.menu-link-active {
+    padding: 0px 10px;
+    vertical-align: middle;
+    color: #FF8576;
+    font-weight: 500;
+}
 
 /*---------------------------------------------------SHOP----------------------------------------------------*/
 .products-page {
-    padding: 80px 165px;
+    padding: 3rem 3rem;
     text-align: center;
     background-color: #F5F5F5;
 }
 
 .products-page h1 {
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
     position: relative;
     margin-bottom: 1em;
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
     text-align: center;
     font-size: 54px;
     font-weight:300;
@@ -48,10 +123,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
-    column-gap: 25px;
-    row-gap: 50px;
+    column-gap: 3rem;
+    row-gap: 3rem;
     text-align: left;
-    margin-top: 40px;
 }
 
 .products a{
@@ -129,31 +203,51 @@ body {
 
 .testi-page {
     display: grid;
-    padding: 80px 165px;
-    column-gap: 24px;
-    row-gap: 32px;
-    grid-template-columns: 330px 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    padding: 4rem 8rem;
+    grid-template-areas: 
+    'one two three'
+    'one four five';
+    grid-auto-columns: 1fr;
+    gap: 1rem;
     background-color: #F5F5F5;
 }
 
-.join-section {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+.item-testi {
+    border: 1px solid #333;
+    padding: 1rem;
 }
 
-.join-section h1 {
+.item-testi:nth-child(1){
+    grid-area: one;
+}
+
+.item-testi:nth-child(2){
+    grid-area: two ;
+}
+
+.item-testi:nth-child(3){
+    grid-area: three;
+}
+
+.item-testi:nth-child(4){
+    grid-area: four;
+}
+
+.item-testi:nth-child(5){
+    grid-area: five;
+}
+
+#join-section {
+    border: none;
+}
+
+#join-section h1 {
     font-size: 50px;
     font-weight: 300;
     text-align: start;
 }
 
-#C1 {
-    text-align: start;
-}
-
-
-.join-section a{
+#join-section a{
     background-color: #fff;
     color: black;
     text-decoration: none;
@@ -162,15 +256,16 @@ body {
 }
 
 
-.join-section h2{
+#join-section h2{
     font-size: 16px;
     padding: 13px;
     border: black solid 0.5px;
     margin-top: 50px;
     width: 250px;
+    text-align: center;
 }
 
-.join-section h2:hover{
+#join-section h2:hover{
     color: #F76A61;
     font-weight: bold;
     border: #F76A61 solid 0.5px;
@@ -198,53 +293,23 @@ body {
     margin-top: 5px ;
 }
 
-
-.item1 {
-    border: solid black 0.5px;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    padding:18px;
-    height: fit-content;
-}
-
-.item2 {
-    border: solid black 0.5px;
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    padding:18px;
-    height: fit-content;
-}
-
-.item3 {
-    border: solid black 0.5px;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    padding:18px;
-    height: fit-content;
-}
-
-.item4 {
-    border: solid black 0.5px;
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    padding:18px;
-    height: fit-content;
-}
-
 /*----------------------------------------------------FOOTER--------------------------------------------------*/
 
 .footer {
     background-color: #f9f9f9;
+    padding: 0 5rem;
 }
 
 .footer-field {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 165px;
-    padding-top: 60px;
-    padding-bottom: 45px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap:3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     list-style-type: none;
-    justify-content: space-between;
 }
 
 .footer-field img {
@@ -258,16 +323,18 @@ body {
 
 .company-logo {
     display: flex;
+    gap: 1rem;
 }
 
-.logo-h3 {
-    font-weight: 700;
-}
-
-.company-logo .logo-h3 {
-    text-align: center;
-    padding: 10px 0px 0px 20px;
+.company-logo span {
     font-size: 20px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
 }
 
 .footer-links a{
@@ -277,30 +344,21 @@ body {
     font-size: 18px;
 }
 
-
-
 .footer-links a:hover {
     color: #F76A61;
     font-weight: 400;
 }
 
-
-.footer-links li{
-    margin-bottom: 20px;
-    margin-right: 55px;
+.footer-sm {
+    display: flex;
+    gap: 1rem;
 }
 
 
-.socialmedia img{
-    margin: 0px 60px 5px 0px;
-}
-
-.socialmedia img:hover {
+.footer-sm img:hover {
 	background-color: #F76A61;
     border-radius: 50%;
 }
-
-
 
 
 .copyright {
@@ -338,7 +396,7 @@ body {
 
     .box-1, .box-2 {
         flex: 100%;
-    }
+        }
 /*---------------------------------------------------MENU---------------------------------------------------*/
 
     .navbar {
@@ -371,7 +429,7 @@ body {
     }
         
     .navbar .nav-container a:hover{
-        color: #FF8576;
+            color: #FF8576;
     }
         
     .nav-container {
@@ -473,8 +531,23 @@ body {
     .nav-container input[type="checkbox"]:checked ~ .logo{
         display: none;
     }
-}
 
+/*---------------------------------------------------TESTI---------------------------------------------------*/
+    .testi-page {
+        display: grid;
+        padding: 4rem 8rem;
+        grid-template-areas: 
+        'one two'
+        'one three'
+        'one four'
+        'one five';
+        grid-auto-columns: 1fr;
+        gap: 1rem;
+        background-color: #F5F5F5;
+    }
+    
+        
+}
 /*Breakpoint to add less space between elements on mobile*/
 @media only screen and (max-width: 768px) {
 
@@ -515,17 +588,17 @@ body {
         font-weight: 300;
         font-size: 1.2rem;
         padding: 0.7rem;
-        }
+    }
         
     .navbar .nav-container a:hover{
             color: #FF8576;
-        }
+    }
         
     .nav-container {
         display: block;
         position: relative;
         height: 60px;
-        }
+    }
         
     .nav-container .checkbox {
         position: absolute;
@@ -537,7 +610,7 @@ body {
         z-index: 5;
         opacity: 0;
         cursor: pointer;
-        }
+    }
         
     .nav-container .hamburger-lines {
         display: block;
@@ -550,7 +623,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        }
+    }
         
     .nav-container .hamburger-lines .line {
         display: block;
@@ -558,21 +631,21 @@ body {
         width: 100%;
         border-radius: 10px;
         background: #0e2431;
-        }
+    }
         
     .nav-container .hamburger-lines .line1 {
         transform-origin: 0% 0%;
         transition: transform 0.4s ease-in-out;
-        }
+    }
         
     .nav-container .hamburger-lines .line2 {
         transition: transform 0.2s ease-in-out;
-        }
+    }
         
     .nav-container .hamburger-lines .line3 {
         transform-origin: 0% 100%;
         transition: transform 0.4s ease-in-out;
-        }
+    }
         
     .navbar .menu-items {
         padding-top: 120px;
@@ -586,40 +659,82 @@ body {
         padding-left: 50px;
         transition: transform 0.5s ease-in-out;
         text-align: center;
-        }
+    }
         
     .navbar .menu-items li {
         margin-bottom: 1.2rem;
         font-size: 1.5rem;
         font-weight: 300;
-        }
+    }
         
     .logo {
         position: absolute;
         top: 15px;
         right: 15px;
         font-size: 1.2rem;
-        }
+    }
         
     .nav-container input[type="checkbox"]:checked ~ .menu-items {
         transform: translateX(0);
-        }
+    }
         
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
         transform: rotate(45deg);
-        }
+    }
         
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
         transform: scaleY(0);
-        }
+    }
         
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-45deg);
-        }
+    }
         
     .nav-container input[type="checkbox"]:checked ~ .logo{
         display: none;
-        }
+    }
+/*---------------------------------------------------SHOP---------------------------------------------------*/
+    .products-page h1 {
+        font-size: 30px;
     }
 
-    /*---------------------------------------------------FOOTER---------------------------------------------------*/
+    .product-text {   
+        opacity: 1;
+    }
+/*---------------------------------------------------TES---------------------------------------------------*/
+    .testi-page {
+        display: grid;
+        padding: 4rem 1rem;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+        grid-auto-columns: 1fr;
+        gap: 1rem;
+        background-color: #F5F5F5;
+    }
+
+    #join-section {
+        padding: 0;
+    }
+
+/*---------------------------------------------------FOOTER---------------------------------------------------*/
+
+    .footer-field { 
+        flex-direction: column;
+        align-items: center;
+        vertical-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-sm {
+        display: flex;
+        align-items: center;
+    }
+}
