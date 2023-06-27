@@ -304,28 +304,47 @@ h2 {
 
 /*----------------------------------------------------TEAM------------------------------------------------------*/
 
-.team-container {
-    display: flex;
-    justify-content: center;
+
+.item1 { 
+    grid-area: texteam; 
+    font-size: 38px;
+    font-weight:900;
+    color: #212121;
+    line-height: 100%;
+}
+
+.item2 {
+    grid-area: imgteam1;
+}
+
+.item3 {
+    grid-area: imgteam2;
+}
+.item4 {
+    grid-area: imgteam3;
+}
+.item5 {
+    grid-area: imgteam4;
+}
+.item6 {
+    grid-area: imgteam5;
+}   
+
+.item7 {
+    grid-area: imgteam6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'texteam texteam imgteam1 imgteam2 imgteam3'
+        'texteam texteam imgteam4 imgteam5 imgteam6';
+    gap: 24px 48px;
+    padding: 16px;
     background-color: #F5F5F5;
 }
 
-.team-box-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 80px 40px;
-}
-
-.team-box-2 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    padding: 24px;
-}
 
 .team-box-img { 
     width: 32%;
@@ -360,6 +379,15 @@ h2 {
     line-height: 200%;
     margin-top: 40px;
     text-align: justify;
+    font-weight: 500;
+}
+
+#title-team {
+    font-size: 54px;
+    font-weight: 300;
+    color: #212121;
+    text-align: center;
+    line-height: 140%;
 }
 
 /*----------------------------------------------------TESTIMONIALS------------------------------------------*/
@@ -436,7 +464,7 @@ h2 {
 }
 
 
-.item1 {
+.item-test-1 {
     border: solid black 0.5px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -444,7 +472,7 @@ h2 {
     height: fit-content;
 }
 
-.item2 {
+.item-test-2 {
     border: solid black 0.5px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
@@ -452,7 +480,7 @@ h2 {
     height: fit-content;
 }
 
-.item3 {
+.item-test-3 {
     border: solid black 0.5px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -460,7 +488,7 @@ h2 {
     height: fit-content;
 }
 
-.item4 {
+.item-test-4 {
     border: solid black 0.5px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
@@ -829,7 +857,7 @@ form input.submit {
         display: none;
         }
     
-/*---------------------------------------------------ABOUT---------------------------------------------------*/
+        /*---------------------------------------------------ABOUT---------------------------------------------------*/
 
         .about-box-1 {
             flex: 100%;
@@ -837,6 +865,20 @@ form input.submit {
 
         .about-box-2 {
             flex: 100%;
+        }
+
+        /*---------------------------------------------------TEAM---------------------------------------------------*/  
+        .grid-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+            grid-template-areas:
+                'texteam imgteam1 imgteam2'
+                'texteam imgteam3 imgteam4'
+                'texteam imgteam5 imgteam6';
+    
+            gap: 16px 24px;
+            padding: 16px;
+            background-color: #F5F5F5;
         }
 
 }
@@ -999,6 +1041,23 @@ form input.submit {
       .about-box-2 {
         flex: 100%;
       }
-        
+      /*---------------------------------------------------TEAM---------------------------------------------------*/  
+
+      .grid-container {
+        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-areas:
+            'texteam'
+            'imgteam1'
+            'imgteam2'
+            'imgteam3'
+            'imgteam4'
+            'imgteam5'
+            'imgteam6';
+
+        gap: 16px 24px;
+        padding: 16px;
+        background-color: #F5F5F5;
+    }
 
     }
