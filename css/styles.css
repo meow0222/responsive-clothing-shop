@@ -555,15 +555,12 @@ section.contact {
 
 .contact-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    flex-wrap: wrap;
     margin-top: 80px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+        flex-direction: column;
 }
 
 form input.form,textarea {
@@ -606,11 +603,16 @@ form input.submit {
     background-color: #ffd5d0;
 }
 
-.contact-box-1,
-.contact-box-2{
-    width: 50%;
-    height: auto;
-    margin-right: 16px;
+
+.contact-box-1 {
+    flex: 50%;
+    display: flex;
+    padding: 0 24px 0 0;
+}
+
+.contact-box-2 {
+    flex: 50%;
+    display: flex;
 }
 
 /*----------------------------------------------------FOOTER--------------------------------------------------*/
@@ -867,7 +869,7 @@ form input.submit {
             flex: 100%;
         }
 
-        /*---------------------------------------------------TEAM---------------------------------------------------*/  
+    /*---------------------------------------------------TEAM---------------------------------------------------*/  
         .grid-container {
             grid-template-columns: 1fr 1fr 1fr;
             display: grid;
@@ -880,7 +882,16 @@ form input.submit {
             padding: 16px;
             background-color: #F5F5F5;
         }
-
+    /*---------------------------------------------------CONTACT---------------------------------------------------*/  
+    .contact-box-1,
+    .contact-box-2{
+        flex: 100%;
+        height: auto;
+        margin-right: 0px;
+        margin-bottom: 32px;
+        padding: 0;
+    }
+    
 }
 
 
@@ -1060,4 +1071,13 @@ form input.submit {
         background-color: #F5F5F5;
     }
 
+    /*---------------------------------------------------CONTACT---------------------------------------------------*/  
+    .contact-box-1,
+    .contact-box-2{
+        flex: 100%;
+        height: auto;
+        margin-right: 0px;
+        margin-bottom: 32px;
+        padding: 0;
+    }
     }
