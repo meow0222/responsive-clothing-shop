@@ -544,9 +544,7 @@ a.menu-link:hover {
         grid-auto-columns: 1fr;
         gap: 1rem;
         background-color: #F5F5F5;
-    }
-    
-        
+    }       
 }
 /*Breakpoint to add less space between elements on mobile*/
 @media only screen and (max-width: 768px) {

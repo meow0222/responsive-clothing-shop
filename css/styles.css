@@ -620,16 +620,19 @@ form input.submit {
 
 .footer {
     background-color: #f9f9f9;
+    padding: 0 5rem;
 }
 
 .footer-field {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px 165px;
-    padding-top: 60px;
-    padding-bottom: 45px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap:3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     list-style-type: none;
-    justify-content: space-between;
 }
 
 .footer-field img {
@@ -643,16 +646,18 @@ form input.submit {
 
 .company-logo {
     display: flex;
+    gap: 1rem;
 }
 
-.logo-h3 {
-    font-weight: 700;
-}
-
-.company-logo .logo-h3 {
-    text-align: center;
-    padding: 10px 0px 0px 20px;
+.company-logo span {
     font-size: 20px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
 }
 
 .footer-links a{
@@ -662,30 +667,21 @@ form input.submit {
     font-size: 18px;
 }
 
-
-
 .footer-links a:hover {
     color: #F76A61;
     font-weight: 400;
 }
 
-
-.footer-links li{
-    margin-bottom: 20px;
-    margin-right: 55px;
+.footer-sm {
+    display: flex;
+    gap: 1rem;
 }
 
 
-.socialmedia img{
-    margin: 0px 60px 5px 0px;
-}
-
-.socialmedia img:hover {
+.footer-sm img:hover {
 	background-color: #F76A61;
     border-radius: 50%;
 }
-
-
 
 
 .copyright {
@@ -699,6 +695,7 @@ form input.submit {
     font-size: 14px;
     font-weight: 300;
 }
+
 
 .top-nav {
     display: none;
@@ -1071,7 +1068,7 @@ form input.submit {
         background-color: #F5F5F5;
     }
 
-    /*---------------------------------------------------CONTACT---------------------------------------------------*/  
+/*---------------------------------------------------CONTACT---------------------------------------------------*/  
     .contact-box-1,
     .contact-box-2{
         flex: 100%;
@@ -1080,4 +1077,24 @@ form input.submit {
         margin-bottom: 32px;
         padding: 0;
     }
+
+
+/*---------------------------------------------------FOOTER---------------------------------------------------*/  
+
+
+    .footer-field { 
+        flex-direction: column;
+        align-items: center;
+        vertical-align: center;
+        gap: 1.5rem;
     }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-sm {
+        display: flex;
+        align-items: center;
+    }
+}
